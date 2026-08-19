@@ -4,7 +4,6 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 2
-description: Curriculum vitae of Keliang Xiao, Ph.D. Candidate in Agricultural & Consumer Economics, University of Illinois Urbana-Champaign.
 ---
 
 <a href="{{ '/assets/pdf/CV_Keliang_Xiao.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download PDF</a>
