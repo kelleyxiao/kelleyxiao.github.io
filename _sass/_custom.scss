@@ -88,7 +88,13 @@ header.post-header:has(+ article > .profile) {
   }
 }
 
-// Teaching page: smaller course title headings
-.course-title {
-  font-size: 1.05rem;
+// Teaching page: plain year-grouped list instead of bordered cards
+.teaching-year-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  li {
+    padding: 0.4rem 0;
+  }
 }
