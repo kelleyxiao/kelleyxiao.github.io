@@ -4,5 +4,5 @@
 cv_pdf: /assets/pdf/CV_Keliang_Xiao.pdf # path to your CV PDF file
 email: keliang2@illinois.edu # your email address
 github_username: kelleyxiao
-scholar_userid: # TODO: add real Google Scholar user ID once available
 rss_icon: true # comment this line to hide the RSS icon
+# scholar_userid: # add real Google Scholar user ID once available, then uncomment
