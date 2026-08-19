@@ -7,7 +7,7 @@ subtitle: Ph.D. Candidate, Department of Agricultural & Consumer Economics, Univ
 profile:
   align: right
   image: profile.jpg
-  image_circular: false
+  image_circular: true
   more_info: >
     <p>Department of Agricultural & Consumer Economics</p>
     <p>414 Mumford Hall</p>
