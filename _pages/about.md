@@ -6,18 +6,18 @@ subtitle: Ph.D. Candidate, Department of Agricultural & Consumer Economics, Univ
 
 profile:
   align: right
-  image: profile.png
+  image: profile.jpg
   image_circular: false
   more_info: >
     <p>Department of Agricultural & Consumer Economics</p>
     <p>414 Mumford Hall</p>
     <p>Urbana, IL, USA</p>
 
-selected_papers: true
+selected_papers: false
 social: true
 
 announcements:
-  enabled: true
+  enabled: false
   scrollable: true
   limit: 5
 

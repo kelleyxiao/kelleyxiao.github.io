@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// Site-specific overrides
+// -----------------------------------------------------------------------------
+
+// About page: strict two-column layout (bio text left, photo right), no text
+// wrapping around the floated image. Scoped to `.profile`'s parent so it only
+// affects the about/profile layouts, not every `article` on the site.
+// Grid (not flex) so that other direct children of <article> — the social
+// icon row, news/selected-publications headings, newsletter block — stay
+// full-width and stack below the two-column area instead of joining it.
+article:has(> .profile) {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  align-items: start;
+  gap: 2.5rem;
+}
+
+article:has(> .profile) > .profile {
+  grid-column: 2;
+  grid-row: 1;
+  float: none;
+  margin: 0;
+  max-width: 280px;
+  width: 100%; // overrides the theme's `.profile { width: 30% }` rule, which was
+  // sized for the old full-width float layout and would otherwise compute
+  // against this 280px grid track instead (shrinking the photo to ~84px)
+}
+
+article:has(> .profile) > .clearfix {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+article:has(> .profile) > :not(.profile):not(.clearfix) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 576px) {
+  article:has(> .profile) {
+    grid-template-columns: 1fr;
+  }
+
+  article:has(> .profile) > .profile {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 100%;
+  }
+
+  article:has(> .profile) > .clearfix {
+    grid-column: 1;
+    grid-row: 2; // stack below the photo instead of overlapping it in the single column
+  }
+}
+
+// Social icon row at the bottom of the about page: scale to 60% of default size
+.social .contact-icons {
+  font-size: 2.4rem; // default is 4rem
+
+  a img {
+    width: 1.92rem; // default is 3.2rem
+    height: 1.92rem;
+  }
+}
+
+// Teaching page: smaller course title headings
+.course-title {
+  font-size: 1.05rem;
+}
