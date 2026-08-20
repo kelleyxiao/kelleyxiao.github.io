@@ -24,6 +24,10 @@ article:has(> .profile) > .profile {
   width: 100%; // overrides the theme's `.profile { width: 30% }` rule, which was
   // sized for the old full-width float layout and would otherwise compute
   // against this grid track instead (shrinking the photo far too small)
+
+  .more-info {
+    font-size: 0.9rem; // match the bio text size in .clearfix
+  }
 }
 
 article:has(> .profile) > .clearfix {
@@ -62,13 +66,13 @@ header.post-header:has(+ article > .profile) {
   }
 }
 
-// Social icon row: scale to 60% of default size
+// Social icon row: scale to 50% of default size
 .social .contact-icons {
-  font-size: 2.4rem; // default is 4rem
+  font-size: 2rem; // default is 4rem
 
   a img {
-    width: 1.92rem; // default is 3.2rem
-    height: 1.92rem;
+    width: 1.6rem; // default is 3.2rem
+    height: 1.6rem;
   }
 }
 
