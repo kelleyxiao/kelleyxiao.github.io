@@ -10,7 +10,7 @@
 // full-width and stack below the two-column area instead of joining it.
 article:has(> .profile) {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 196px; // 70% of the original 280px
   align-items: start;
   gap: 2.5rem;
 }
@@ -20,10 +20,10 @@ article:has(> .profile) > .profile {
   grid-row: 1;
   float: none;
   margin: 0;
-  max-width: 280px;
+  max-width: 196px; // 70% of the original 280px
   width: 100%; // overrides the theme's `.profile { width: 30% }` rule, which was
   // sized for the old full-width float layout and would otherwise compute
-  // against this 280px grid track instead (shrinking the photo to ~84px)
+  // against this grid track instead (shrinking the photo far too small)
 }
 
 article:has(> .profile) > .clearfix {
