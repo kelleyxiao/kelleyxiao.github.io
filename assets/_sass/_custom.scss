@@ -27,6 +27,16 @@ article:has(> .profile) > .profile {
 
   .more-info {
     font-size: 0.9rem; // match the bio text size in .clearfix
+    font-family: inherit; // theme default is monospace, which sets the address
+    // apart from everything else on the page and wastes width in this narrow column
+    text-align: center; // centered under the photo so the photo, address and
+    // social icons all read as one balanced column
+
+    // The theme renders each address line as an inline-block <p>, which would
+    // sit left-aligned regardless of the parent's text-align.
+    p {
+      display: block;
+    }
   }
 }
 
@@ -80,7 +90,7 @@ header.post-header:has(+ article > .profile) {
 // address block, instead of centered full-width at the bottom of the page
 // (see _layouts/about.liquid). Left-align it to match the address text.
 .profile .social {
-  text-align: left;
+  text-align: center; // centered to match the address block above it
   margin-top: 0.75rem;
 
   .contact-icons {
