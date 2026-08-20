@@ -66,13 +66,13 @@ header.post-header:has(+ article > .profile) {
   }
 }
 
-// Social icon row: 50% of theme default, then a further 80% on top (= 40% of default)
+// Social icon row: 50% of theme default, then a further 90% on top (= 45% of default)
 .social .contact-icons {
-  font-size: 1.6rem; // default is 4rem
+  font-size: 1.8rem; // default is 4rem
 
   a img {
-    width: 1.28rem; // default is 3.2rem
-    height: 1.28rem;
+    width: 1.44rem; // default is 3.2rem
+    height: 1.44rem;
   }
 }
 
